@@ -1,11 +1,19 @@
 
-# USB Watch Script (`usbwatch.sh`)
+# USB Watch Script (`compare_usb.sh`)
 
 This script helps to monitor changes in USB devices connected to your system. It runs the `lsusb` command before and after a USB device is plugged or unplugged, and then shows the differences.
 
 ## Requirements
 
 You need the `lsusb` command to be installed on your system.
+
+### Installing `lsusb` on MacOS
+
+    You can install usbutils which includes lsusb however this sometimes only returns the device ids with no description
+
+```bash
+brew install lsusb
+```
 
 ### Installing `lsusb` on Linux
 
@@ -32,17 +40,17 @@ sudo pacman -S usbutils
 
 ## Usage
 
-1. Download or copy the `usbwatch.sh` script.
+1. Download or copy the `compare_usb.sh` script.
 2. Make the script executable by running:
 
 ```bash
-chmod +x usbwatch.sh
+chmod +x compare_usb.sh
 ```
 
 3. Run the script:
 
 ```bash
-./usbwatch.sh
+./compare_usb.sh
 ```
 
 Follow the on-screen instructions to plug or unplug a USB device and press `Enter` when ready. The script will show the differences between the initial and final states of USB devices.
@@ -57,7 +65,7 @@ To run the script from any directory, you can add it to your PATH.
 
 ```bash
 mkdir -p ~/bin
-mv usbwatch.sh ~/bin/
+mv compare_usb.sh ~/bin/
 ```
 
 2. Add `~/bin` to your `PATH` if it's not already included. Edit your `~/.bashrc` or `~/.bash_profile`:
@@ -72,9 +80,9 @@ echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-Now you can run `usbwatch.sh` from anywhere by typing `usbwatch.sh` in the terminal.
+Now you can run `compare_usb.sh` from anywhere by typing `compare_usb.sh` in the terminal.
 
 ## License
 
-This project is released under the MIT License.
+This project is released under the GNU GENERAL PUBLIC LICENSE.
 
