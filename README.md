@@ -9,7 +9,7 @@ You need the `lsusb` command to be installed on your system.
 
 ### Installing `lsusb` on MacOS
 
-    You can install usbutils which includes lsusb however this sometimes only returns the device ids with no description
+You can install usbutils which includes lsusb however this sometimes only returns the device ids with no description
 
 ```bash
 brew install lsusb
